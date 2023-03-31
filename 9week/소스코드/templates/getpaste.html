@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<title> My Memo </title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+
+<body>
+
+<h1> {{ count_pastes }} pastes by {{ username }} </h1>
+<hr size="5"> <hr width="100px">
+
+{% for key,value in paste_list.items() %}
+<h2>
+    <p>{{ key }} <br>
+</h2>
+<h3>
+    {{ value }}
+    <hr size="5"> <hr width="100px">
+</h3>
+</p>
+{% endfor %}
+</body>
+</html>
